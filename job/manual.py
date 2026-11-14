@@ -83,6 +83,11 @@ class FileExtractor:
         return benefits
 
 
+def _starts_from_uncommitted_catalog() -> bool:
+    from . import publish
+    return publish.catalog_changed()
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Card Credits catalog update without the API")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -98,6 +103,11 @@ def main(argv: list[str] | None = None) -> int:
             print(f"{row['card']:28} {row['method']:14} {row['chars']:>7}  {row['note'] or ''}")
         return 0
 
+    if args.publish and _starts_from_uncommitted_catalog():
+        print("ERROR: catalog.json already differs from the committed copy. A run must start from "
+              "main's catalog, or big changes would be compared with themselves and published "
+              "without review. Run `git checkout -- catalog.json` and try again.")
+        return 1
     catalog = load_json(config.CATALOG_PATH)
     if catalog_errors(catalog):
         print("ERROR: catalog.json is already invalid; fix it before updating.")

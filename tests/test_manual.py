@@ -44,3 +44,14 @@ def test_a_page_with_no_answer_is_never_read_as_empty(tmp_path):
         manual.FileExtractor(tmp_path).extract({"id": "test-card"}, URL, PAGE, [])
     with pytest.raises(ExtractionError):
         manual.FileExtractor(tmp_path).extract({"id": "other-card"}, URL, PAGE, [])
+
+
+def test_publishing_never_starts_from_an_uncommitted_catalog(monkeypatch, capsys):
+    """Nov 14 2026: a run started from an already-updated catalog saw no big changes and
+    published 45 of them to main without review. Now it refuses to start."""
+    from job import publish, update
+    monkeypatch.setattr(publish, "catalog_changed", lambda: True)
+    assert manual.main(["run", "--publish"]) == 1
+    assert "differs from the committed copy" in capsys.readouterr().out
+    assert update.main(["--publish"]) == 1
+    assert "differs from the committed copy" in capsys.readouterr().out

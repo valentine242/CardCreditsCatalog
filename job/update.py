@@ -145,6 +145,12 @@ def main(argv: list[str] | None = None) -> int:
     if args.check_pages:
         return check_pages(sources)
 
+    if args.publish:
+        from . import publish
+        if publish.catalog_changed():
+            print("ERROR: catalog.json already differs from the committed copy. A run must start "
+                  "from main's catalog, or big changes would be published without review.")
+            return 1
     catalog = load_json(config.CATALOG_PATH)
     start_errors = catalog_errors(catalog)
     if start_errors:
