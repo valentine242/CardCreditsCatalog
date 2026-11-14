@@ -1,0 +1,8 @@
+# The update job (job/) and its tests.
+anthropic>=2.8,<3
+requests>=2.32
+beautifulsoup4>=4.12
+lxml>=5.2
+jsonschema>=4.23
+playwright>=1.48
+pytest>=8
