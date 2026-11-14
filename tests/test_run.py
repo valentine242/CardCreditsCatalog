@@ -113,7 +113,7 @@ def test_card_that_would_break_the_schema_is_left_unchanged(monkeypatch):
 def test_cards_not_in_sources_are_left_alone():
     old = seed()
     result = go(old, ALL, src=sources(card_id="brand-new"))
-    assert result.catalog["cards"][:9] == old["cards"]
+    assert result.catalog["cards"][:len(old["cards"])] == old["cards"]
     assert catalog_errors(result.catalog) == []
 
 

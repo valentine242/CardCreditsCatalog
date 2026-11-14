@@ -141,12 +141,12 @@ def test_input_is_not_modified():
 
 def test_catalog_merge_adds_new_cards_last_and_leaves_others_alone():
     old = seed()
-    new_card = {"id": "capital-one-venture-x", "name": "Capital One Venture X",
-                "issuer": "Capital One"}
+    new_card = {"id": "test-brand-new-card", "name": "Brand New Card",
+                "issuer": "Capital One"}           # an id the live catalog never has
     new = merge_catalog(old, [{"card": new_card, "found": [found(name="Travel Credit")],
                                "complete": True}], TODAY)
     assert [c["id"] for c in new["cards"]] == [c["id"] for c in old["cards"]] + [new_card["id"]]
-    assert new["cards"][:9] == old["cards"]
+    assert new["cards"][:len(old["cards"])] == old["cards"]
     assert new["generated"] == TODAY
     assert catalog_errors(new) == []
 
