@@ -1,9 +1,10 @@
 name: Update catalog
 
+# Manual only. The owner chose not to use an API key (Nov 14 2026), so the check runs in Claude Code
+# instead (`python -m job.manual`, see README). To make it automatic again: add the ANTHROPIC_API_KEY
+# secret and put back `schedule: - cron: "0 10 * * 1"` (Mondays 10:00 UTC).
 on:
-  schedule:
-    - cron: "0 10 * * 1"   # every Monday, 10:00 UTC
-  workflow_dispatch:        # the "Run workflow" button
+  workflow_dispatch:        # the "Run workflow" button (needs the ANTHROPIC_API_KEY secret)
 
 permissions:
   contents: write

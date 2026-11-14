@@ -11,7 +11,8 @@ Public repo `valentine242/CardCreditsCatalog`, served by GitHub Pages from `main
 - `job/extract.py`: the Claude call (structured output, `output_config.format`) and `ground()`, which rejects any benefit whose quote isn't on the page or whose amount isn't in its quote.
 - `job/merge.py`: stable ids (match by id, then normalised name, then a new slug; never renumber, never delete: missing benefits become `status: "removed"`).
 - `job/classify.py`: safe vs big. `job/report.py`: the pull request table. `job/publish.py`: commit to main (safe) or pull request labelled `needs review` on branch `catalog-update` (big). `job/update.py`: the run. `job/validate.py`: schema check.
-- `.github/workflows/update-catalog.yml` (Mondays 10:00 UTC + Run workflow), `tests.yml` (every push and PR).
+- `job/manual.py`: the same run **without the Claude API** (the owner chose not to use an API key, Nov 14 2026). `save-pages` keeps each page's text in `out/pages/`; Claude Code reads them and writes `out/answers/<card id>.json` (the `extract.output_schema()` shape, one list per URL, every benefit with a word-for-word `evidence` quote); `run` sends those answers through `ground`, merge, classify and publish exactly like the weekly job. A page with no answer counts as unread (big), never as empty.
+- `.github/workflows/update-catalog.yml` (manual Run workflow only, needs the API key; the weekly schedule is off), `tests.yml` (every push and PR).
 
 ## Commands
 ```
@@ -22,6 +23,8 @@ python3 -m venv .venv && .venv/bin/pip install -r job/requirements.txt
 .venv/bin/python -m job.update --check-pages  # which source pages give text (no API key needed)
 .venv/bin/python -m job.update                # needs ANTHROPIC_API_KEY; writes catalog.json
 .venv/bin/python -m job.publish               # commit to main, or open the pull request
+.venv/bin/python -m job.manual save-pages     # no API key: save every page's text to out/pages/
+.venv/bin/python -m job.manual run --publish  # build from out/answers/, then commit or open the PR
 ```
 
 ## Rules
@@ -35,3 +38,6 @@ python3 -m venv .venv && .venv/bin/pip install -r job/requirements.txt
 - Pages: plain HTML with an inline stylesheet (light and dark); no external assets, scripts or trackers.
 - Fix problems at their cause. Add a test for every change to classify, merge, ground or the schema.
 - Run the tests before every commit; push after each commit.
+
+## Running the check without the API (how the owner runs it)
+When the owner asks for a catalog check: `save-pages`; read each card's page text (benefit lines with their surroundings); write each card's answer file following the rules in `extract.SYSTEM_PROMPT` (only what the page states, one period window per amount, existing ids matched, nothing from memory); check each file with `ground` before the run; `run --publish`; tell the owner the pull request link and anything left out on purpose. Never merge it.

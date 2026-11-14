@@ -4,7 +4,7 @@ This is the public website and data file behind the **Card Credits** iPhone app.
 
 - **catalog.json** is the list of cards and their credits. The app downloads it about once a day.
 - **privacy.html** and **support.html** are the app's privacy policy and support page.
-- A robot checks the list against the card issuers' own web pages **every Monday** and keeps it up to date.
+- The list is checked against the card issuers' own web pages **when you ask Claude Code to**. No API key is used (your choice, Nov 14 2026).
 
 The site lives at https://valentine242.github.io/CardCreditsCatalog/. The app has these three addresses built in, so never rename the files:
 
@@ -18,9 +18,19 @@ Anything pushed to the `main` branch is published on the site a minute or two la
 
 Not financial advice. Always confirm terms with your card issuer.
 
-## How the weekly check works
+## How to check the list (no API key)
 
-Every Monday at 10:00 UTC (and whenever you press **Run workflow**), GitHub runs the "Update catalog" job:
+About once a month, open Terminal and type:
+
+```
+cd ~/Developer/CardCreditsCatalog && claude "Run the catalog check without the API, as in CLAUDE.md."
+```
+
+Claude Code reads every issuer page on your own Claude plan, and the same program as below checks each credit it found against the page. Big changes open a pull request for you to review; you merge it to publish. Nothing costs extra.
+
+## How the check works
+
+Each check (by Claude Code, or by the "Update catalog" job if you ever add an API key) does this:
 
 1. It opens each card's official page (listed in `sources.json`; issuer sites only: Chase, American Express, Capital One, Citi).
 2. It sends the page's text to Claude (Anthropic's AI) and asks: which credits does this page state? Claude may only use what is written on the page. A program then checks every answer against the page: each credit needs a word-for-word quote from the page, and each dollar amount must be in that quote. Anything that fails is thrown out, not guessed.
@@ -35,9 +45,9 @@ If a run has both safe and big changes, they all wait together in the pull reque
 
 A credit that disappears from an issuer's page is never deleted. It stays in the list marked `removed`, so the app can keep people's history for it.
 
-## One-time setup: add the API key
+## Optional: make it automatic with an API key
 
-The job needs a Claude API key. Until it's there, the Monday run fails with the message "ANTHROPIC_API_KEY is missing" and changes nothing.
+You don't need this. It lets GitHub run the check by itself (it is billed separately from your Claude plan, roughly $2–4 per run). After adding the key, ask Claude Code to turn the weekly schedule back on.
 
 **Get a key**
 
@@ -94,7 +104,7 @@ A pull request left open is simply refreshed by the next run.
 | `schema/catalog.schema.json` | The exact shape `catalog.json` must have |
 | `job/` | The update robot (Python) |
 | `tests/` | Its tests (no internet needed) |
-| `.github/workflows/` | The weekly job and the test run |
+| `.github/workflows/` | The update job (manual, needs an API key) and the test run |
 
 ## Before the app goes live
 
