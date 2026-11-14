@@ -1,7 +1,7 @@
 {
  "schema_version": 1,
- "generated": "2026-11-13",
- "note": "Seed only. Every benefit must be checked against the issuer's page and given a source_url and last_verified date before release.",
+ "generated": "2026-11-14",
+ "note": "Updated automatically from the card issuers' own pages. Each benefit lists its source page and the date it was last checked. Not financial advice. Always confirm terms with your card issuer.",
  "cards": [
   {
    "id": "chase-sapphire-reserve",
@@ -16,23 +16,23 @@
      "value_usd": 15.0,
      "period": "Monthly",
      "setup_step": "Activate DashPass",
-     "details": "In-app promo on eligible orders. Started October 1, 2026.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "A monthly promo on any qualifying DoorDash order, through December 31, 2029.",
+     "source_url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "doordash-grocery-and-retail-promos",
-     "name": "DoorDash grocery and retail promos",
+     "name": "DoorDash grocery and retail promo, first of two",
      "category": "Food delivery",
-     "value_text": "$20.00",
-     "value_usd": 20.0,
+     "value_text": "$10.00",
+     "value_usd": 10.0,
      "period": "Monthly",
      "setup_step": "Activate DashPass",
-     "details": "Two $10 promos on non-restaurant orders, $20 minimum each.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "One of two $10 promos each month for groceries, daily essentials and more, through December 31, 2029.",
+     "source_url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "lyft-credit",
@@ -42,10 +42,10 @@
      "value_usd": 10.0,
      "period": "Monthly",
      "setup_step": "Add card to Lyft",
-     "details": null,
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "An in-app credit each calendar month for qualifying Lyft purchases, through September 30, 2027.",
+     "source_url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "peloton-membership-credit",
@@ -55,10 +55,10 @@
      "value_usd": 10.0,
      "period": "Monthly",
      "setup_step": "Activation required",
-     "details": null,
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "Eligible Peloton memberships, through December 31, 2027.",
+     "source_url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "exclusive-tables-dining-credit",
@@ -68,10 +68,10 @@
      "value_usd": 150.0,
      "period": "Twice a year",
      "setup_step": null,
-     "details": "Sapphire Reserve Exclusive Tables restaurants on OpenTable.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "Restaurants in the Sapphire Reserve Exclusive Tables program on OpenTable: up to $150 January through June and again July through December.",
+     "source_url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "stubhub-and-viagogo-credit",
@@ -81,10 +81,10 @@
      "value_usd": 150.0,
      "period": "Twice a year",
      "setup_step": "Activation required",
-     "details": "The date the merchant submits the charge decides the half-year.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "StubHub and viagogo purchases, up to $150 January through June and again July through December, through December 31, 2027.",
+     "source_url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "the-edit-hotel-credit-first-of-two",
@@ -94,10 +94,10 @@
      "value_usd": 250.0,
      "period": "Annual",
      "setup_step": null,
-     "details": "Prepaid stays of 2+ nights. The charge date counts, so a 2026 booking can be for 2027 travel.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "Up to $250 for each prepaid booking with The Edit, up to $500 a year. Two-night minimum.",
+     "source_url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "the-edit-hotel-credit-second-of-two",
@@ -107,10 +107,10 @@
      "value_usd": 250.0,
      "period": "Annual",
      "setup_step": null,
-     "details": "Prepaid stays of 2+ nights.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "Up to $250 for each prepaid booking with The Edit, up to $500 a year. Two-night minimum.",
+     "source_url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "select-hotels-credit",
@@ -123,7 +123,7 @@
      "details": "Prepaid 2+ night Chase Travel stays at IHG, Montage, Pendry, Omni, Virgin, Minor or Pan Pacific. Announced for 2026 only.",
      "source_url": null,
      "last_verified": null,
-     "status": "needs_review"
+     "status": "removed"
     },
     {
      "id": "sixt-anniversary-offer",
@@ -136,7 +136,7 @@
      "details": "$125 back on $500 of SIXT rentals, for cardmembers eligible as of August 25, 2026.",
      "source_url": null,
      "last_verified": null,
-     "status": "needs_review"
+     "status": "removed"
     },
     {
      "id": "annual-travel-credit",
@@ -146,10 +146,36 @@
      "value_usd": 300.0,
      "period": "Anniversary",
      "setup_step": null,
-     "details": "Applies automatically to travel purchases. Chase shows your exact period in the benefits tracker.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "Statement credits for travel purchases each account anniversary year. Purchases it covers don't earn points.",
+     "source_url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve",
+     "last_verified": "2026-11-14",
+     "status": "verified"
+    },
+    {
+     "id": "doordash-grocery-and-retail-promo-second-of-two",
+     "name": "DoorDash grocery and retail promo, second of two",
+     "category": "Food delivery",
+     "value_text": "$10.00",
+     "value_usd": 10.0,
+     "period": "Monthly",
+     "setup_step": "Activate DashPass",
+     "details": "One of two $10 promos each month for groceries, daily essentials and more, through December 31, 2029.",
+     "source_url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve",
+     "last_verified": "2026-11-14",
+     "status": "verified"
+    },
+    {
+     "id": "global-entry-tsa-precheck-or-nexus-credit",
+     "name": "Global Entry, TSA PreCheck or NEXUS credit",
+     "category": "Travel",
+     "value_text": "$120.00",
+     "value_usd": 120.0,
+     "period": "One time",
+     "setup_step": "Pay the application fee with this card",
+     "details": "One statement credit every 4 years for the application fee.",
+     "source_url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     }
    ]
   },
@@ -166,10 +192,10 @@
      "value_usd": 12.0,
      "period": "Monthly",
      "setup_step": "Opt in every calendar year",
-     "details": null,
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "Rideshare purchases paid with this card: up to $12 a month January through November and up to $18 in December.",
+     "source_url": "https://creditcards.chase.com/travel-credit-cards/united/club-infinite",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "instacart-credits",
@@ -178,11 +204,11 @@
      "value_text": "$20.00",
      "value_usd": 20.0,
      "period": "Monthly",
-     "setup_step": "Activate Instacart+",
-     "details": "Two $10 credits, each on one order of $10 or more.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "setup_step": null,
+     "details": "Two $10 credits each month for purchases made directly through Instacart with this card.",
+     "source_url": "https://creditcards.chase.com/travel-credit-cards/united/club-infinite",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "renowned-hotels-and-resorts-credit",
@@ -192,10 +218,10 @@
      "value_usd": 200.0,
      "period": "Anniversary",
      "setup_step": null,
-     "details": "Prepaid stays. Allow 6 to 8 weeks to post.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "Hotel stays prepaid directly through Renowned Hotels and Resorts for United with this card.",
+     "source_url": "https://creditcards.chase.com/travel-credit-cards/united/club-infinite",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "jsx-flight-credit",
@@ -205,10 +231,10 @@
      "value_usd": 200.0,
      "period": "Anniversary",
      "setup_step": null,
-     "details": "Book directly with JSX.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "Flights booked directly with JSX using this card.",
+     "source_url": "https://creditcards.chase.com/travel-credit-cards/united/club-infinite",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "avis-or-budget-travel-credit",
@@ -218,10 +244,23 @@
      "value_usd": 100.0,
      "period": "Anniversary",
      "setup_step": null,
-     "details": "$50 in TravelBank cash on each of two rentals of 2+ days booked through MileagePlus Travel.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "$50 in United TravelBank cash on each of your first two Avis or Budget rentals booked through mileageplustravel.united.com.",
+     "source_url": "https://creditcards.chase.com/travel-credit-cards/united/club-infinite",
+     "last_verified": "2026-11-14",
+     "status": "verified"
+    },
+    {
+     "id": "global-entry-tsa-precheck-or-nexus-credit",
+     "name": "Global Entry, TSA PreCheck or NEXUS credit",
+     "category": "Travel",
+     "value_text": "$120.00",
+     "value_usd": 120.0,
+     "period": "One time",
+     "setup_step": "Pay the application fee with this card",
+     "details": "One statement credit every 4 years for the application fee.",
+     "source_url": "https://creditcards.chase.com/travel-credit-cards/united/club-infinite",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     }
    ]
   },
@@ -238,10 +277,10 @@
      "value_usd": 25.0,
      "period": "Monthly",
      "setup_step": "Enroll in Amex first",
-     "details": "Disney+, Hulu, ESPN, NYT, Paramount+, Peacock, WSJ, YouTube Premium or YouTube TV, billed directly.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "Disney+, ESPN streaming, Hulu, The New York Times, Paramount+, Peacock, The Wall Street Journal, YouTube Premium or YouTube TV.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/platinum/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "uber-cash",
@@ -251,10 +290,10 @@
      "value_usd": 15.0,
      "period": "Monthly",
      "setup_step": "Add card to Uber",
-     "details": "US rides and Uber Eats. Pay with an Amex card.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "U.S. rides and orders when you pay with an Amex card, plus a $20 bonus in December.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/platinum/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "walmart-credit",
@@ -263,11 +302,11 @@
      "value_text": "$12.95",
      "value_usd": 12.95,
      "period": "Monthly",
-     "setup_step": "Check your Amex benefits",
-     "details": "Monthly Walmart+ plan only. Covers tax too.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "setup_step": null,
+     "details": "One auto-renewing monthly Walmart+ membership, plus applicable taxes.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/platinum/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "resy-credit",
@@ -277,10 +316,10 @@
      "value_usd": 100.0,
      "period": "Quarterly",
      "setup_step": "Enroll in Amex first",
-     "details": null,
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "Eligible purchases with Resy, including at qualifying U.S. Resy restaurants.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/platinum/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "lululemon-credit",
@@ -290,23 +329,23 @@
      "value_usd": 75.0,
      "period": "Quarterly",
      "setup_step": "Enroll in Amex first",
-     "details": "US stores, excluding outlets, and lululemon.com.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "U.S. lululemon stores (not outlets) and lululemon.com.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/platinum/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "lodging-credit",
-     "name": "Lodging credit",
+     "name": "Hotel credit",
      "category": "Hotels",
      "value_text": "$300.00",
      "value_usd": 300.0,
      "period": "Twice a year",
      "setup_step": null,
-     "details": "Prepaid Fine Hotels + Resorts, The Hotel Collection or Airbnb Luxe. Cutoff is 11:59 p.m. Central: 6:59 p.m. in Hawaii on June 30, 7:59 p.m. on December 31. From January 1, 2027, Fine Hotels + Resorts also needs 2+ nights.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "Prepaid Fine Hotels + Resorts or The Hotel Collection bookings through Amex Travel. Some bookings need a 2-night minimum.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/platinum/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "equinox-credit",
@@ -319,7 +358,7 @@
      "details": null,
      "source_url": null,
      "last_verified": null,
-     "status": "needs_review"
+     "status": "removed"
     },
     {
      "id": "clear-credit",
@@ -328,11 +367,11 @@
      "value_text": "$219.00",
      "value_usd": 219.0,
      "period": "Annual",
-     "setup_step": "Enroll in Amex first",
-     "details": null,
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "setup_step": null,
+     "details": "An auto-renewing CLEAR+ membership paid with this card.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/platinum/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "airline-fee-credit",
@@ -342,10 +381,10 @@
      "value_usd": 200.0,
      "period": "Annual",
      "setup_step": "Enroll and choose an airline",
-     "details": "Incidental fees on your selected airline, not airfare.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "Incidental fees such as checked bags and in-flight refreshments on your one selected airline, not airfare.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/platinum/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "oura-ring-credit",
@@ -355,10 +394,10 @@
      "value_usd": 200.0,
      "period": "Annual",
      "setup_step": "Enroll in Amex first",
-     "details": "Ring purchase at ouraring.com.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "An Oura Ring bought at ouraring.com with this card.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/platinum/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "uber-one-credit",
@@ -368,10 +407,10 @@
      "value_usd": 120.0,
      "period": "Annual",
      "setup_step": null,
-     "details": "Auto-renewing membership paid with this card.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "An auto-renewing Uber One membership paid with this card.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/platinum/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "airbnb-experiences-credit",
@@ -384,7 +423,20 @@
      "details": "Unlocks after a confirmed Luxe booking through Amex Travel.",
      "source_url": null,
      "last_verified": null,
-     "status": "needs_review"
+     "status": "removed"
+    },
+    {
+     "id": "global-entry-or-tsa-precheck-credit",
+     "name": "Global Entry or TSA PreCheck credit",
+     "category": "Travel",
+     "value_text": "$120.00",
+     "value_usd": 120.0,
+     "period": "One time",
+     "setup_step": "Pay the application fee with this card",
+     "details": "One credit every 4 years: $120 for Global Entry, or up to $85 for TSA PreCheck through an official enrollment provider.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/platinum/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     }
    ]
   },
@@ -401,10 +453,10 @@
      "value_usd": 10.0,
      "period": "Monthly",
      "setup_step": "Add card to Uber",
-     "details": "US rides and Uber Eats. Pay with an Amex card.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "U.S. rides and Uber Eats orders. Pay with an Amex card.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/gold-card/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "dining-credit",
@@ -414,10 +466,10 @@
      "value_usd": 10.0,
      "period": "Monthly",
      "setup_step": "Enroll in Amex first",
-     "details": "Grubhub, Cheesecake Factory, Buffalo Wild Wings, Wonder or Five Guys.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "Grubhub (including Seamless), Buffalo Wild Wings, Five Guys, The Cheesecake Factory or Wonder.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/gold-card/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "dunkin-credit",
@@ -427,10 +479,10 @@
      "value_usd": 7.0,
      "period": "Monthly",
      "setup_step": "Enroll in Amex first",
-     "details": null,
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "U.S. Dunkin' locations, paid with this card.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/gold-card/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "resy-credit",
@@ -440,10 +492,10 @@
      "value_usd": 50.0,
      "period": "Twice a year",
      "setup_step": "Enroll in Amex first",
-     "details": null,
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "Qualifying U.S. Resy restaurants: up to $50 January through June and up to $50 July through December.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/gold-card/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     }
    ]
   },
@@ -460,10 +512,10 @@
      "value_usd": 10.0,
      "period": "Monthly",
      "setup_step": "Enroll in Amex first",
-     "details": "DisneyPlus.com, Hulu.com or Stream.ESPN.com subscriptions.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "A subscription, including a bundle, bought on the U.S. DisneyPlus.com, Hulu.com or Stream.ESPN.com websites. No minimum purchase.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/blue-cash-preferred/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     }
    ]
   },
@@ -480,10 +532,10 @@
      "value_usd": 20.0,
      "period": "Monthly",
      "setup_step": "Enroll in Amex first",
-     "details": null,
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "Eligible purchases at qualifying U.S. Resy restaurants, paid with the enrolled card.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-reserve-american-express-card/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "rideshare-credit",
@@ -493,10 +545,10 @@
      "value_usd": 10.0,
      "period": "Monthly",
      "setup_step": "Enroll in Amex first",
-     "details": null,
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "U.S. rideshare purchases with select providers, paid with this card.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-reserve-american-express-card/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "delta-stays-credit",
@@ -506,10 +558,10 @@
      "value_usd": 200.0,
      "period": "Annual",
      "setup_step": null,
-     "details": "Prepaid hotels or vacation rentals booked through Delta Stays.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "Prepaid hotels or vacation rentals booked through Delta Stays on delta.com with this card.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-reserve-american-express-card/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "companion-certificate",
@@ -519,10 +571,23 @@
      "value_usd": null,
      "period": "Anniversary",
      "setup_step": null,
-     "details": "Issued after each renewal. Check the expiration printed on your certificate in your Delta wallet.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "A Delta First, Delta Comfort or Delta Main round trip within the U.S. and to Mexico, the Caribbean or Central America, each year after the card renews. Taxes and fees of $22 to $250 apply.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-reserve-american-express-card/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
+    },
+    {
+     "id": "global-entry-or-tsa-precheck-credit",
+     "name": "Global Entry or TSA PreCheck credit",
+     "category": "Travel",
+     "value_text": "$120.00",
+     "value_usd": 120.0,
+     "period": "One time",
+     "setup_step": "Pay the application fee with this card",
+     "details": "One credit every 4 years: $120 for Global Entry, or up to $85 for TSA PreCheck through an official enrollment provider.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-reserve-american-express-card/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     }
    ]
   },
@@ -539,10 +604,10 @@
      "value_usd": 25.0,
      "period": "Monthly",
      "setup_step": null,
-     "details": "Eligible restaurant purchases worldwide.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "Eligible purchases at restaurants worldwide, paid with this card.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/marriott-bonvoy-brilliant/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "free-night-award",
@@ -552,10 +617,23 @@
      "value_usd": null,
      "period": "Anniversary",
      "setup_step": null,
-     "details": "Up to 85,000 points. Issued after each card renewal; expires one year from issue.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "One night at a redemption level of up to 85,000 Marriott Bonvoy points, issued every year after the card renewal month.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/marriott-bonvoy-brilliant/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
+    },
+    {
+     "id": "global-entry-or-tsa-precheck-credit",
+     "name": "Global Entry or TSA PreCheck credit",
+     "category": "Travel",
+     "value_text": "$120.00",
+     "value_usd": 120.0,
+     "period": "One time",
+     "setup_step": "Pay the application fee with this card",
+     "details": "One credit every 4 years: $120 for Global Entry, or up to $85 for TSA PreCheck through an official enrollment provider.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/marriott-bonvoy-brilliant/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     }
    ]
   },
@@ -572,10 +650,10 @@
      "value_usd": 8.0,
      "period": "Monthly",
      "setup_step": "Opt in every calendar year",
-     "details": null,
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "Rideshare purchases paid with this card: up to $8 a month January through November and up to $12 in December.",
+     "source_url": "https://creditcards.chase.com/travel-credit-cards/united/united-quest",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "instacart-credits",
@@ -585,10 +663,10 @@
      "value_usd": 15.0,
      "period": "Monthly",
      "setup_step": "Activate Instacart+",
-     "details": "A $10 credit and a $5 credit each month.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "A $10 credit and a $5 credit each month for purchases made directly through Instacart with this card.",
+     "source_url": "https://creditcards.chase.com/travel-credit-cards/united/united-quest",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "united-travelbank-cash",
@@ -598,10 +676,10 @@
      "value_usd": 200.0,
      "period": "Anniversary",
      "setup_step": null,
-     "details": "$200 for United or United Express flights. Posts automatically each anniversary year, and TravelBank cash has its own expiration.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "Added automatically after account opening and on each account anniversary, for United or United Express flights. TravelBank cash has its own expiration.",
+     "source_url": "https://creditcards.chase.com/travel-credit-cards/united/united-quest",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "renowned-hotels-and-resorts-credit",
@@ -611,10 +689,10 @@
      "value_usd": 150.0,
      "period": "Anniversary",
      "setup_step": null,
-     "details": "Prepay directly through Renowned Hotels and Resorts.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "Hotel stays prepaid directly through Renowned Hotels and Resorts for United with this card.",
+     "source_url": "https://creditcards.chase.com/travel-credit-cards/united/united-quest",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "jsx-flight-credit",
@@ -624,10 +702,10 @@
      "value_usd": 150.0,
      "period": "Anniversary",
      "setup_step": null,
-     "details": "Book directly with JSX.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "Flights booked directly with JSX using this card.",
+     "source_url": "https://creditcards.chase.com/travel-credit-cards/united/united-quest",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "avis-or-budget-travel-credit",
@@ -637,10 +715,10 @@
      "value_usd": 80.0,
      "period": "Anniversary",
      "setup_step": null,
-     "details": "$40 in TravelBank cash on each of two rentals booked through MileagePlus Travel.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "United TravelBank cash on your first two Avis or Budget rentals booked through mileageplustravel.united.com.",
+     "source_url": "https://creditcards.chase.com/travel-credit-cards/united/united-quest",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "10-000-mile-award-flight-discount",
@@ -650,10 +728,23 @@
      "value_usd": null,
      "period": "Anniversary",
      "setup_step": null,
-     "details": "Starts at the first anniversary. Check its expiration in your MileagePlus account.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "From the first anniversary on, for an eligible award flight on United or United Express. Check its expiration in your MileagePlus account.",
+     "source_url": "https://creditcards.chase.com/travel-credit-cards/united/united-quest",
+     "last_verified": "2026-11-14",
+     "status": "verified"
+    },
+    {
+     "id": "global-entry-tsa-precheck-or-nexus-credit",
+     "name": "Global Entry, TSA PreCheck or NEXUS credit",
+     "category": "Travel",
+     "value_text": "$120.00",
+     "value_usd": 120.0,
+     "period": "One time",
+     "setup_step": "Pay the application fee with this card",
+     "details": "One statement credit every 4 years for the application fee.",
+     "source_url": "https://creditcards.chase.com/travel-credit-cards/united/united-quest",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     }
    ]
   },
@@ -669,11 +760,11 @@
      "value_text": "$50.00",
      "value_usd": 50.0,
      "period": "Quarterly",
-     "setup_step": "Check your Amex benefits",
-     "details": "Eligible airline charges, including airfare booked directly with an airline or through amextravel.com.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "setup_step": null,
+     "details": "Flights bought directly with an airline, on AmexTravel.com or in the Amex Travel App, paid with this card.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/hilton-honors-aspire/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "hilton-resort-credit",
@@ -683,10 +774,10 @@
      "value_usd": 200.0,
      "period": "Twice a year",
      "setup_step": null,
-     "details": "Room charges at participating Hilton resorts, paid with this card at checkout.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "Eligible purchases made directly with participating Hilton Resorts, paid with this card.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/hilton-honors-aspire/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "clear-credit",
@@ -696,10 +787,10 @@
      "value_usd": 219.0,
      "period": "Annual",
      "setup_step": null,
-     "details": "Auto-renewing CLEAR+ membership paid with this card.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "A CLEAR+ membership paid with this card.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/hilton-honors-aspire/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     },
     {
      "id": "free-night-reward",
@@ -709,10 +800,390 @@
      "value_usd": null,
      "period": "Anniversary",
      "setup_step": null,
-     "details": "Issued each year. Check the expiration in your Hilton account.",
-     "source_url": null,
-     "last_verified": null,
-     "status": "needs_review"
+     "details": "From Hilton Honors in your first year of card membership and every year when the card renews.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/hilton-honors-aspire/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": "capital-one-venture-x",
+   "name": "Capital One Venture X",
+   "issuer": "Capital One",
+   "benefits": [
+    {
+     "id": "annual-travel-credit",
+     "name": "Annual travel credit",
+     "category": "Travel",
+     "value_text": "$300.00",
+     "value_usd": 300.0,
+     "period": "Anniversary",
+     "setup_step": "Book through Capital One Travel",
+     "details": "For hotels, flights, vacation rentals and more booked through Capital One Travel. Each year's credit expires on the next account anniversary.",
+     "source_url": "https://www.capitalone.com/credit-cards/venture-x/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
+    },
+    {
+     "id": "global-entry-or-tsa-precheck-credit",
+     "name": "Global Entry or TSA PreCheck credit",
+     "category": "Travel",
+     "value_text": "$120.00",
+     "value_usd": 120.0,
+     "period": "One time",
+     "setup_step": "Pay the application fee with this card",
+     "details": "One statement credit every 4 years for the Global Entry or TSA PreCheck application fee.",
+     "source_url": "https://www.capitalone.com/credit-cards/venture-x/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": "citi-strata-elite",
+   "name": "Citi Strata Elite",
+   "issuer": "Citi",
+   "benefits": [
+    {
+     "id": "annual-hotel-benefit",
+     "name": "Annual hotel benefit",
+     "category": "Hotels",
+     "value_text": "$300.00",
+     "value_usd": 300.0,
+     "period": "Annual",
+     "setup_step": "Book through cititravel.com",
+     "details": "Up to $300 off one hotel stay of 2 nights or more, once per calendar year, excluding taxes and fees.",
+     "source_url": "https://www.citi.com/credit-cards/citi-strata-elite-credit-card",
+     "last_verified": "2026-11-14",
+     "status": "verified"
+    },
+    {
+     "id": "splurge-credit",
+     "name": "Splurge credit",
+     "category": "Shopping & memberships",
+     "value_text": "$200.00",
+     "value_usd": 200.0,
+     "period": "Annual",
+     "setup_step": "Choose up to 2 brands",
+     "details": "Statement credits at up to 2 brands of your choice: 1stDibs, American Airlines, Best Buy, Future Personal Training and Live Nation (exclusions apply).",
+     "source_url": "https://www.citi.com/credit-cards/citi-strata-elite-credit-card",
+     "last_verified": "2026-11-14",
+     "status": "verified"
+    },
+    {
+     "id": "blacklane-credit",
+     "name": "Blacklane credit",
+     "category": "Rideshare",
+     "value_text": "$100.00",
+     "value_usd": 100.0,
+     "period": "Twice a year",
+     "setup_step": null,
+     "details": "Statement credits on Blacklane chauffeur bookings: up to $100 January through June and up to $100 July through December.",
+     "source_url": "https://www.citi.com/credit-cards/citi-strata-elite-credit-card",
+     "last_verified": "2026-11-14",
+     "status": "verified"
+    },
+    {
+     "id": "global-entry-or-tsa-precheck-credit",
+     "name": "Global Entry or TSA PreCheck credit",
+     "category": "Travel",
+     "value_text": "$120.00",
+     "value_usd": 120.0,
+     "period": "One time",
+     "setup_step": "Pay the application fee with this card",
+     "details": "One statement credit every 4 years for the Global Entry or TSA PreCheck application fee.",
+     "source_url": "https://www.citi.com/credit-cards/citi-strata-elite-credit-card",
+     "last_verified": "2026-11-14",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": "chase-sapphire-preferred",
+   "name": "Chase Sapphire Preferred",
+   "issuer": "Chase",
+   "benefits": [
+    {
+     "id": "chase-travel-hotel-credit",
+     "name": "Chase Travel hotel credit",
+     "category": "Hotels",
+     "value_text": "$100.00",
+     "value_usd": 100.0,
+     "period": "Anniversary",
+     "setup_step": "Book through Chase Travel",
+     "details": "Applied automatically to hotel stays bought through Chase Travel with this card, each account anniversary year.",
+     "source_url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred",
+     "last_verified": "2026-11-14",
+     "status": "verified"
+    },
+    {
+     "id": "doordash-grocery-and-retail-promo",
+     "name": "DoorDash grocery and retail promo",
+     "category": "Food delivery",
+     "value_text": "$10.00",
+     "value_usd": 10.0,
+     "period": "Monthly",
+     "setup_step": "Activate DashPass",
+     "details": "$10 off one non-restaurant DoorDash order each calendar month, through December 31, 2029. Unused value doesn't roll over.",
+     "source_url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred",
+     "last_verified": "2026-11-14",
+     "status": "verified"
+    },
+    {
+     "id": "global-entry-tsa-precheck-or-nexus-credit",
+     "name": "Global Entry, TSA PreCheck or NEXUS credit",
+     "category": "Travel",
+     "value_text": "$120.00",
+     "value_usd": 120.0,
+     "period": "One time",
+     "setup_step": "Pay the application fee with this card",
+     "details": "One statement credit every 4 years for the application fee.",
+     "source_url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred",
+     "last_verified": "2026-11-14",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": "amex-business-platinum",
+   "name": "Business Platinum Card",
+   "issuer": "American Express",
+   "benefits": [
+    {
+     "id": "hotel-credit",
+     "name": "Hotel credit",
+     "category": "Hotels",
+     "value_text": "$300.00",
+     "value_usd": 300.0,
+     "period": "Twice a year",
+     "setup_step": null,
+     "details": "Prepaid Fine Hotels + Resorts or The Hotel Collection bookings. The Hotel Collection needs a 2-night minimum; from January 1, 2027, Fine Hotels + Resorts does too.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-platinum-credit-card-amex/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
+    },
+    {
+     "id": "airline-fee-credit",
+     "name": "Airline fee credit",
+     "category": "Airlines & flights",
+     "value_text": "$200.00",
+     "value_usd": 200.0,
+     "period": "Annual",
+     "setup_step": "Enroll and choose an airline",
+     "details": "Incidental fees charged by your one selected airline, not airfare.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-platinum-credit-card-amex/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
+    },
+    {
+     "id": "hilton-credit",
+     "name": "Hilton credit",
+     "category": "Hotels",
+     "value_text": "$50.00",
+     "value_usd": 50.0,
+     "period": "Quarterly",
+     "setup_step": "Enroll in Amex first",
+     "details": "Purchases made directly with a property in the Hilton portfolio. Enrolling also registers a Hilton for Business account. Gift cards don't count.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-platinum-credit-card-amex/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
+    },
+    {
+     "id": "clear-credit",
+     "name": "CLEAR+ credit",
+     "category": "Travel",
+     "value_text": "$219.00",
+     "value_usd": 219.0,
+     "period": "Annual",
+     "setup_step": "Enroll in Amex first",
+     "details": "An auto-renewing CLEAR+ membership.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-platinum-credit-card-amex/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
+    },
+    {
+     "id": "global-entry-or-tsa-precheck-credit",
+     "name": "Global Entry or TSA PreCheck credit",
+     "category": "Travel",
+     "value_text": "$120.00",
+     "value_usd": 120.0,
+     "period": "One time",
+     "setup_step": "Pay the application fee with this card",
+     "details": "Every 4 years: $120 for Global Entry, or up to $85 for TSA PreCheck through an official enrollment provider.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-platinum-credit-card-amex/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
+    },
+    {
+     "id": "dell-technologies-credit",
+     "name": "Dell Technologies credit",
+     "category": "Shopping & memberships",
+     "value_text": "$150.00",
+     "value_usd": 150.0,
+     "period": "Annual",
+     "setup_step": "Enroll in Amex first",
+     "details": "U.S. purchases directly with Dell Technologies. An extra $1,000 credit comes after $5,000 or more of those purchases in the calendar year.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-platinum-credit-card-amex/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
+    },
+    {
+     "id": "chatgpt-business-credit",
+     "name": "ChatGPT Business credit",
+     "category": "Shopping & memberships",
+     "value_text": "$300.00",
+     "value_usd": 300.0,
+     "period": "Annual",
+     "setup_step": "Enroll in Amex first",
+     "details": "U.S. purchases of ChatGPT Business paid with this card.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-platinum-credit-card-amex/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
+    },
+    {
+     "id": "adobe-credit",
+     "name": "Adobe credit",
+     "category": "Shopping & memberships",
+     "value_text": "$250.00",
+     "value_usd": 250.0,
+     "period": "Annual",
+     "setup_step": "Enroll in Amex first",
+     "details": "Comes after you spend $600 or more on U.S. purchases directly with Adobe in the calendar year.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-platinum-credit-card-amex/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
+    },
+    {
+     "id": "indeed-credit",
+     "name": "Indeed credit",
+     "category": "Shopping & memberships",
+     "value_text": "$90.00",
+     "value_usd": 90.0,
+     "period": "Quarterly",
+     "setup_step": "Enroll in Amex first",
+     "details": "Purchases with Indeed paid with this card.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-platinum-credit-card-amex/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
+    },
+    {
+     "id": "wireless-credit",
+     "name": "Wireless credit",
+     "category": "Shopping & memberships",
+     "value_text": "$10.00",
+     "value_usd": 10.0,
+     "period": "Monthly",
+     "setup_step": "Enroll in Amex first",
+     "details": "U.S. wireless telephone service bought directly from a wireless provider with this card.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-platinum-credit-card-amex/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
+    },
+    {
+     "id": "zo-event-space-or-dining-club-credit",
+     "name": "ZO event space or Dining Club credit",
+     "category": "Shopping & memberships",
+     "value_text": "$500.00",
+     "value_usd": 500.0,
+     "period": "Annual",
+     "setup_step": null,
+     "details": "Comes with the complimentary ZO membership from Tishman Speyer: statement credits toward event space bookings or a Dining Club membership paid with this card.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-platinum-credit-card-amex/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": "amex-delta-platinum",
+   "name": "Delta SkyMiles Platinum",
+   "issuer": "American Express",
+   "benefits": [
+    {
+     "id": "companion-certificate",
+     "name": "Companion Certificate",
+     "category": "Airlines & flights",
+     "value_text": "1 certificate",
+     "value_usd": null,
+     "period": "Anniversary",
+     "setup_step": null,
+     "details": "A Delta Main round trip within the U.S., Caribbean or Central America, each year after the card renews. Taxes and fees of $22 to $250 apply.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-platinum-american-express-card/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
+    },
+    {
+     "id": "rideshare-credit",
+     "name": "Rideshare credit",
+     "category": "Rideshare",
+     "value_text": "$10.00",
+     "value_usd": 10.0,
+     "period": "Monthly",
+     "setup_step": "Enroll in Amex first",
+     "details": "U.S. rideshare purchases with select providers, paid with this card.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-platinum-american-express-card/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
+    },
+    {
+     "id": "resy-credit",
+     "name": "Resy credit",
+     "category": "Dining",
+     "value_text": "$10.00",
+     "value_usd": 10.0,
+     "period": "Monthly",
+     "setup_step": "Enroll in Amex first",
+     "details": "At qualifying U.S. Resy restaurants, paid with the enrolled card.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-platinum-american-express-card/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
+    },
+    {
+     "id": "delta-stays-credit",
+     "name": "Delta Stays credit",
+     "category": "Hotels",
+     "value_text": "$150.00",
+     "value_usd": 150.0,
+     "period": "Annual",
+     "setup_step": null,
+     "details": "Prepaid hotels or vacation rentals booked through Delta Stays on delta.com with this card.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-platinum-american-express-card/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
+    },
+    {
+     "id": "global-entry-or-tsa-precheck-credit",
+     "name": "Global Entry or TSA PreCheck credit",
+     "category": "Travel",
+     "value_text": "$120.00",
+     "value_usd": 120.0,
+     "period": "One time",
+     "setup_step": "Pay the application fee with this card",
+     "details": "Every 4 years: $120 for Global Entry, or up to $85 for TSA PreCheck through an official enrollment provider.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-platinum-american-express-card/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": "amex-hilton-surpass",
+   "name": "Hilton Honors Surpass",
+   "issuer": "American Express",
+   "benefits": [
+    {
+     "id": "hilton-credit",
+     "name": "Hilton credit",
+     "category": "Hotels",
+     "value_text": "$50.00",
+     "value_usd": 50.0,
+     "period": "Quarterly",
+     "setup_step": null,
+     "details": "Purchases made directly with a property in the Hilton portfolio, paid with this card.",
+     "source_url": "https://www.americanexpress.com/us/credit-cards/card/hilton-honors-surpass/",
+     "last_verified": "2026-11-14",
+     "status": "verified"
     }
    ]
   }
