@@ -25,7 +25,7 @@ from pathlib import Path
 from . import config, fetch, report
 from .extract import ExtractionError
 from .update import dump_catalog, load_json, run
-from .validate import catalog_errors
+from .validate import catalog_errors, sources_errors
 
 PAGES_DIR = config.OUT_DIR / "pages"
 ANSWERS_DIR = config.OUT_DIR / "answers"
@@ -103,6 +103,10 @@ def main(argv: list[str] | None = None) -> int:
             print(f"{row['card']:28} {row['method']:14} {row['chars']:>7}  {row['note'] or ''}")
         return 0
 
+    hint_errors = sources_errors(sources)
+    if hint_errors:
+        print("ERROR: " + "\nERROR: ".join(hint_errors))
+        return 1
     if args.publish and _starts_from_uncommitted_catalog():
         print("ERROR: catalog.json already differs from the committed copy. A run must start from "
               "main's catalog, or big changes would be compared with themselves and published "

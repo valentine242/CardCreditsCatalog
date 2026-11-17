@@ -2,8 +2,9 @@
 owner's eyes.
 
 Safe: wording (name), setup step or details changed, the source link changed,
-      last_verified refreshed, or a benefit went from needs_review to verified
-      with nothing else different.
+      last_verified refreshed, a benefit went from needs_review to verified
+      with nothing else different, or a card's display hint changed (its short
+      name or colour family: how the card looks in the app, not what it gives).
 Big:  any amount changed (value_usd or value_text), a benefit added or
       removed (or brought back), a new card, a card missing, a period, category
       or end_date changed, plus run problems (a page that yielded nothing, a
@@ -29,6 +30,13 @@ SAFE_FIELDS = {
     "details": "details changed",
     "source_url": "source link changed",
     "last_verified": "checked again",
+}
+
+
+# A card's display hints (from sources.json): how it is named and coloured in the app.
+CARD_DISPLAY_FIELDS = {
+    "short_name": "card short name changed",
+    "color": "card colour changed",
 }
 
 
@@ -114,6 +122,10 @@ def classify(old_catalog: dict, new_catalog: dict) -> list[Change]:
         for field in ("name", "issuer"):
             if old_card.get(field) != new_card.get(field):
                 changes.append(Change(SAFE, f"card {field} reworded", new_card["name"], "",
+                                      _show(old_card.get(field)), _show(new_card.get(field))))
+        for field, label in CARD_DISPLAY_FIELDS.items():
+            if old_card.get(field) != new_card.get(field):
+                changes.append(Change(SAFE, label, new_card["name"], "",
                                       _show(old_card.get(field)), _show(new_card.get(field))))
         old_benefits = {b["id"]: b for b in old_card["benefits"]}
         new_benefits = {b["id"]: b for b in new_card["benefits"]}

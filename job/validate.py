@@ -41,6 +41,22 @@ def catalog_errors(catalog: object) -> list[str]:
     return errors
 
 
+def sources_errors(sources: object) -> list[str]:
+    """Problems with the display hints in sources.json (a card's optional `short_name` and `color`),
+    checked against the same rules the catalog's schema gives them. Empty list = fine.
+    Caught here, a typing mistake in sources.json stops the run before anything is written."""
+    rules = load_schema()["$defs"]["card"]["properties"]
+    errors: list[str] = []
+    cards = sources.get("cards", []) if isinstance(sources, dict) else []
+    for card in cards:
+        for field in ("short_name", "color"):
+            if field not in card:
+                continue
+            for err in Draft202012Validator(rules[field]).iter_errors(card[field]):
+                errors.append(f"sources.json: {card.get('id', '(no id)')}: {field}: {err.message}")
+    return errors
+
+
 def main(argv: list[str]) -> int:
     path = Path(argv[1]) if len(argv) > 1 else config.CATALOG_PATH
     try:
@@ -52,6 +68,12 @@ def main(argv: list[str]) -> int:
     if errors:
         print(f"INVALID: {path} has {len(errors)} problem(s):")
         for line in errors:
+            print(f"  - {line}")
+        return 1
+    hint_errors = sources_errors(json.loads(config.SOURCES_PATH.read_text(encoding="utf-8")))
+    if hint_errors:
+        print(f"INVALID: sources.json has {len(hint_errors)} problem(s):")
+        for line in hint_errors:
             print(f"  - {line}")
         return 1
     cards = catalog["cards"]
