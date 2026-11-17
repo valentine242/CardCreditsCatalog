@@ -20,8 +20,8 @@ from pathlib import Path
 from . import config, fetch, report
 from .classify import BIG, Change, classify, has_big
 from .extract import ClaudeExtractor, ExtractionError, FatalExtractionError, ground
-from .merge import merge_catalog, normalise_name
-from .validate import catalog_errors
+from .merge import apply_display_hints, merge_catalog, normalise_name
+from .validate import catalog_errors, sources_errors
 
 
 @dataclass
@@ -104,6 +104,9 @@ def run(catalog: dict, sources: dict, today: str, get_text, extractor) -> RunRes
             continue
         current = candidate
 
+    # How each card is named and coloured in the app comes from sources.json as it is, for every card
+    # (also one whose page gave nothing this run).
+    current = apply_display_hints(current, sources)
     current["generated"] = today
     current["note"] = config.CATALOG_NOTE
     final_errors = catalog_errors(current)
@@ -144,6 +147,10 @@ def main(argv: list[str] | None = None) -> int:
     sources = load_json(config.SOURCES_PATH)
     if args.check_pages:
         return check_pages(sources)
+    for line in sources_errors(sources):
+        print(f"ERROR: {line}")
+    if sources_errors(sources):
+        return 1
 
     if args.publish:
         from . import publish

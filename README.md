@@ -38,7 +38,7 @@ Each check (by Claude Code, or by the "Update catalog" job if you ever add an AP
 
 | Pile | What's in it | What happens |
 |---|---|---|
-| **Safe** | A credit's name, setup step or details were reworded; the "last checked" date was refreshed | Published straight away, no action from you |
+| **Safe** | A credit's name, setup step or details were reworded; the "last checked" date was refreshed; a card's short name or colour family changed (how the card looks in the app, not what it gives) | Published straight away, no action from you |
 | **Big** | An amount changed, a credit was added or removed, a new card, a period / category / end date changed, a page couldn't be read, or the result failed its checks | A **pull request** labelled **needs review** is opened. Nothing is published until you merge it |
 
 If a run has both safe and big changes, they all wait together in the pull request, so the app never sees a half-updated list.
@@ -100,11 +100,25 @@ A pull request left open is simply refreshed by the next run.
 |---|---|
 | `catalog.json` | The published list (the app reads this) |
 | `index.html`, `privacy.html`, `support.html` | The website |
-| `sources.json` | The official issuer page(s) for each of the 15 cards |
+| `sources.json` | The official issuer page(s) for each of the 15 cards, and each card's two display hints (see "How a card looks in the app") |
 | `schema/catalog.schema.json` | The exact shape `catalog.json` must have |
 | `job/` | The update robot (Python) |
 | `tests/` | Its tests (no internet needed) |
 | `.github/workflows/` | The update job (manual, needs an API key) and the test run |
+
+## How a card looks in the app
+
+Each card can carry two optional hints that only change how the app shows it. They are not credits, amounts or deadlines.
+
+| Field | What it is | Example |
+|---|---|---|
+| `short_name` | The shortest name people use for the card, taken from the card's own official name (at most 24 characters) | `"Platinum"`, `"Bonvoy Brilliant"` |
+| `color` | The colour family of the card as its issuer's page shows it. One of: `gold`, `platinum`, `silver`, `black`, `blue`, `green`, `red`, `purple`, `white`, `rose`. A family, not an exact colour: the app turns it into a light and a dark shade | `"gold"` |
+
+- **Where they live:** in `sources.json`, next to each card's name. You (or Claude Code, when you ask) edit them there by hand. The check copies them into `catalog.json` exactly as they are, for every card, at the next run.
+- **Both are optional.** A card without `short_name` gets a name the app works out itself. A card without `color` gets a neutral shape. Leave `color` out when the issuer's page doesn't make the colour clear.
+- **Changing one is a safe change:** it is published straight away with the next check.
+- A value that isn't allowed (a colour outside the list, a name longer than 24 characters) stops the check with a plain error before anything is written.
 
 ## Before the app goes live
 

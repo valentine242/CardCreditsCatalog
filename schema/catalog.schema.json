@@ -26,6 +26,14 @@
         "id": { "$ref": "#/$defs/slug" },
         "name": { "type": "string", "minLength": 1 },
         "issuer": { "type": "string", "minLength": 1 },
+        "short_name": {
+          "description": "Optional display hint: the shortest name people use for the card that still tells cards apart, from the card's own official name (\"Platinum\", \"Bonvoy Brilliant\").",
+          "type": "string", "minLength": 1, "maxLength": 24
+        },
+        "color": {
+          "description": "Optional display hint: the colour family of the card as its issuer shows it. A family, not an exact colour: the app turns each into a light and a dark shade. Left out when the issuer's page doesn't make it clear.",
+          "enum": ["gold", "platinum", "silver", "black", "blue", "green", "red", "purple", "white", "rose"]
+        },
         "benefits": { "type": "array", "items": { "$ref": "#/$defs/benefit" } }
       }
     },

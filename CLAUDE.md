@@ -4,11 +4,12 @@ Public repo `valentine242/CardCreditsCatalog`, served by GitHub Pages from `main
 
 ## What lives where
 - `catalog.json`, `privacy.html`, `support.html`: the three URLs the app has hard-coded. Never rename or move them. `index.html` links them; `.nojekyll` keeps Pages from processing files.
-- `sources.json`: `{id, name, issuer, urls[]}` for 15 cards. Issuer sites only (`config.ALLOWED_HOSTS`).
+- `sources.json`: `{id, name, issuer, short_name?, color?, urls[]}` for 15 cards. Issuer sites only (`config.ALLOWED_HOSTS`). `short_name` and `color` are the card's **display hints** (owner approved Nov 16 2026): how the app names and colours the card, curated here by hand, never extracted by the job.
 - `schema/catalog.schema.json`: the catalog's JSON Schema (used by the job, the tests and both workflows). The app decodes exactly this shape; changing it means changing the app.
 - `job/config.py`: every setting, including the one model constant `CLAUDE_MODEL`.
 - `job/fetch.py`: page text. Plain download plus headless Chromium (Playwright), lines merged; `method` is plain / plain+browser / browser / none.
 - `job/extract.py`: the Claude call (structured output, `output_config.format`) and `ground()`, which rejects any benefit whose quote isn't on the page or whose amount isn't in its quote.
+- Display hints in the code: `merge.with_display_hints` / `apply_display_hints` copy them from `sources.json` onto every catalog card unchanged (also a card whose page gave nothing; a hint taken out of `sources.json` leaves the catalog); `validate.sources_errors` checks them against the schema before a run; `classify.CARD_DISPLAY_FIELDS` makes a change to either a **safe** change. Tests: `tests/test_display_hints.py`.
 - `job/merge.py`: stable ids (match by id, then normalised name, then a new slug; never renumber, never delete: missing benefits become `status: "removed"`).
 - `job/classify.py`: safe vs big. `job/report.py`: the pull request table. `job/publish.py`: commit to main (safe) or pull request labelled `needs review` on branch `catalog-update` (big). `job/update.py`: the run. `job/validate.py`: schema check.
 - `job/manual.py`: the same run **without the Claude API** (the owner chose not to use an API key, Nov 14 2026). `save-pages` keeps each page's text in `out/pages/`; Claude Code reads them and writes `out/answers/<card id>.json` (the `extract.output_schema()` shape, one list per URL, every benefit with a word-for-word `evidence` quote); `run` sends those answers through `ground`, merge, classify and publish exactly like the weekly job. A page with no answer counts as unread (big), never as empty.
@@ -29,6 +30,7 @@ python3 -m venv .venv && .venv/bin/pip install -r job/requirements.txt
 
 ## Rules
 - Facts come only from issuer pages. Never type a benefit, amount, deadline or term into `catalog.json` by hand or from memory; never guess. An amount not on the page is `value_usd: null` with an empty `value_text`.
+- Display hints are the one thing typed by hand, and only in `sources.json`. `short_name`: from the card's own official name (drop the issuer, a leading "The", a trailing "Card"; keep a co-brand partner's word; no invented nicknames). `color`: the colour family (`gold`, `platinum`, `silver`, `black`, `blue`, `green`, `red`, `purple`, `white`, `rose`) of the card image on the issuer's own page, or of a metal in the card's name; leave it out when the page doesn't make it clear (today: Delta SkyMiles Reserve, a dark slate grey between black and blue). Never copy an issuer's card artwork into this repo.
 - Never merge a catalog pull request: merging is the owner's approval.
 - Never write or push a catalog that fails validation.
 - Benefit ids are permanent. Nothing is deleted from the catalog (`status: "removed"`).

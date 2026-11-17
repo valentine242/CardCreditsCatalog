@@ -14,6 +14,34 @@ BENEFIT_KEYS = [
 ]
 
 
+# Display hints for the app: how a card is named and coloured in a list. They are curated by the
+# owner in sources.json (not read from pages by the job) and copied into the catalog as they are.
+DISPLAY_FIELDS = ["short_name", "color"]
+
+
+def with_display_hints(card: dict, source: dict) -> dict:
+    """A copy of the catalog `card` carrying the display hints of its sources.json entry, unchanged.
+    A hint the source doesn't have is taken off the card (sources.json is where they live).
+    Keys keep one order: id, name, issuer, short_name, color, benefits."""
+    out = {key: card[key] for key in ("id", "name", "issuer") if key in card}
+    for key in DISPLAY_FIELDS:
+        if source.get(key) is not None:
+            out[key] = source[key]
+    for key, value in card.items():
+        if key not in out and key not in DISPLAY_FIELDS:
+            out[key] = value
+    return out
+
+
+def apply_display_hints(catalog: dict, sources: dict) -> dict:
+    """Every card of the catalog that sources.json lists gets its display hints, whether or not its
+    pages were read this run. Cards the catalog doesn't have are not added. Returns a new catalog."""
+    new = copy.deepcopy(catalog)
+    by_id = {c["id"]: c for c in sources.get("cards", [])}
+    new["cards"] = [with_display_hints(c, by_id[c["id"]]) if c["id"] in by_id else c for c in new["cards"]]
+    return new
+
+
 def slugify(text: str) -> str:
     slug = re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
     return slug or "benefit"
@@ -122,7 +150,8 @@ def merge_catalog(catalog: dict, results: list[dict], today: str, note: str | No
                     "issuer": source["issuer"], "benefits": []}
             new["cards"].append(card)
             by_id[card["id"]] = card
-        merged = merge_card(card, result["found"], today, complete=result["complete"])
+        merged = with_display_hints(
+            merge_card(card, result["found"], today, complete=result["complete"]), source)
         card.clear()
         card.update(merged)
     new["generated"] = today
